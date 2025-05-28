@@ -6,6 +6,7 @@ import './styles/App.css';
 // Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import SocialContactFloating from './components/SocialContactFloating';
 
 // Pages
 import Home from './pages/Home';
@@ -19,6 +20,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <SocialContactFloating />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
