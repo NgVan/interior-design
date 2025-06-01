@@ -113,7 +113,7 @@ const Contact = () => {
                     <FontAwesomeIcon icon={faPhone} className="text-primary me-3" size="lg" />
                     <div>
                       <h5 className="mb-0">Điện thoại</h5>
-                      <p className="mb-0">0123 456 789</p>
+                      <p className="mb-0">0795 676 367</p>
                     </div>
                   </div>
 
@@ -121,7 +121,7 @@ const Contact = () => {
                     <FontAwesomeIcon icon={faEnvelope} className="text-primary me-3" size="lg" />
                     <div>
                       <h5 className="mb-0">Email</h5>
-                      <p className="mb-0">info@interiordesign.com</p>
+                      <p className="mb-0">Wihome.qn@gmail.com</p>
                     </div>
                   </div>
 
@@ -129,7 +129,7 @@ const Contact = () => {
                     <FontAwesomeIcon icon={faLocationDot} className="text-primary me-3" size="lg" />
                     <div>
                       <h5 className="mb-0">Địa chỉ</h5>
-                      <p className="mb-0">123 Đường ABC, Quận XYZ, TP.HCM</p>
+                      <p className="mb-0">Số 640/12 Phan Văn Trị, P.10, Q.Gò Vấp, TP.HCM</p>
                     </div>
                   </div>
 

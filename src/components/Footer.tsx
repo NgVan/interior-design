@@ -6,50 +6,58 @@ import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-5">
+    <footer className="bg-dark text-light py-4">
       <Container>
         <Row>
           <Col md={4} className="mb-4">
-            <h5>Về chúng tôi</h5>
-            <p>Chúng tôi là đơn vị thiết kế nội thất hàng đầu, mang đến những giải pháp thiết kế sáng tạo và chất lượng cho không gian sống của bạn.</p>
+            <h5>Wihome</h5>
+            <p className="mb-0">
+              Chúng tôi mang đến những giải pháp thiết kế nội thất sáng tạo và độc đáo,
+              biến không gian của bạn thành nơi thực sự đáng sống.
+            </p>
           </Col>
           <Col md={4} className="mb-4">
             <h5>Liên hệ</h5>
-            <ul className="list-unstyled">
-              <li className="mb-2">
-                <FontAwesomeIcon icon={faPhone} className="me-2" />
-                0123 456 789
-              </li>
-              <li className="mb-2">
-                <FontAwesomeIcon icon={faEnvelope} className="me-2" />
-                info@interiordesign.com
-              </li>
-              <li className="mb-2">
-                <FontAwesomeIcon icon={faLocationDot} className="me-2" />
-                123 Đường ABC, Quận XYZ, TP.HCM
-              </li>
-            </ul>
+            <p className="mb-1">Địa chỉ: Số 640/12 Phan Văn Trị, P.10, Q.Gò Vấp, TP.HCM</p>
+            <p className="mb-1">Điện thoại: 0795 676 367</p>
+            <p className="mb-0">Email: Wihome.qn@gmail.com</p>
           </Col>
           <Col md={4} className="mb-4">
+              {/* Facebook, Instagram, Youtube */}
             <h5>Theo dõi chúng tôi</h5>
             <div className="social-links">
-              <a href="#" className="text-light me-3">
-                <FontAwesomeIcon icon={faFacebook} size="lg" />
+              <a 
+                href="https://www.facebook.com/zup.kind" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
               </a>
-              <a href="#" className="text-light me-3">
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
+              <a 
+                href="https://www.instagram.com/your-account" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
-              <a href="#" className="text-light">
-                <FontAwesomeIcon icon={faYoutube} size="lg" />
+
+              <a 
+                href="https://www.youtube.com/your-channel" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FontAwesomeIcon icon={faYoutube} size="2x" />
               </a>
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col className="text-center">
-            <p className="mb-0">&copy; 2024 Interior Design. All rights reserved.</p>
-          </Col>
-        </Row>
+        <hr className="my-4" />
+        <div className="text-center">
+          <p className="mb-0">&copy; {new Date().getFullYear()} Wihome Design. All rights reserved.</p>
+        </div>
       </Container>
     </footer>
   );

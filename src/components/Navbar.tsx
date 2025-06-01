@@ -22,7 +22,7 @@ const Navbar = () => {
             height="40" 
             className="d-inline-block align-top me-2"
           />
-          <span className="brand-text">Interior Design</span>
+          <span className="brand-text">Wihome</span>
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle 
           aria-controls="basic-navbar-nav" 
