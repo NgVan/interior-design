@@ -68,6 +68,26 @@ main {
   object-fit: cover;
 }
 
+/* Navbar styles */
+.navbar {
+  background: linear-gradient(to right, #64a5eb 0%, #84b7ee 5%, #ffffff 100%) !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  color: #333 !important;
+}
+
+.navbar .nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #007bff !important;
+}
+
 /* Brand text style */
 .brand-text {
   font-weight: 600;
