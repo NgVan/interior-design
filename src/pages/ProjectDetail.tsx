@@ -63,20 +63,15 @@ const ProjectDetail = () => {
         <h1 className="page-title">{project.title}</h1>
         <p className="lead text-center mb-5">{project.location}</p>
 
+        {/* First image and project info */}
         <Row className="mb-5">
           <Col lg={8} className="mb-4">
-            <div className="project-gallery">
-              {project.images.map((image, index) => (
-                <div key={index} className="mb-4">
-                  <img
-                    src={image}
-                    alt={`${project.title} - Hình ${index + 1}`}
-                    className="img-fluid rounded shadow"
-                    style={{ width: '100%', height: 'auto' }}
-                  />
-                </div>
-              ))}
-            </div>
+            <img
+              src={project.images[0]}
+              alt={`${project.title} - Hình chính`}
+              className="img-fluid rounded shadow"
+              style={{ width: '100%', height: 'auto' }}
+            />
           </Col>
           <Col lg={4}>
             <Card className="shadow-sm">
@@ -95,6 +90,20 @@ const ProjectDetail = () => {
             </Card>
           </Col>
         </Row>
+
+        {/* Additional images - full width */}
+        <div className="project-gallery">
+          {project.images.slice(1).map((image, index) => (
+            <div key={index} className="mb-5">
+              <img
+                src={image}
+                alt={`${project.title} - Hình ${index + 2}`}
+                className="img-fluid rounded shadow"
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
+          ))}
+        </div>
       </Container>
     </main>
   );
