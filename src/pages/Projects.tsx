@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -13,6 +14,20 @@ const Projects = () => {
   ];
 
   const projects = [
+    {
+      id: 'project-1',
+      title: 'Biệt thự hiện đại',
+      location: 'Quận 2, TP.HCM',
+      image: '/project-1.jpg',
+      description: 'Thiết kế nội thất cho biệt thự cao cấp với phong cách hiện đại, sang trọng.'
+    },
+    {
+      id: 'project-2',
+      title: 'Căn hộ chung cư',
+      location: 'Quận 7, TP.HCM',
+      image: '/project-2.jpg',
+      description: 'Thiết kế không gian sống cho căn hộ chung cư cao cấp.'
+    },
     {
       id: 1,
       title: 'Căn hộ cao cấp Quận 2',
@@ -65,6 +80,9 @@ const Projects = () => {
     <main>
       <Container>
         <h1 className="page-title">Dự án của chúng tôi</h1>
+        <p className="lead text-center mb-5">
+          Khám phá các dự án thiết kế nội thất tiêu biểu của chúng tôi
+        </p>
 
         {/* Category Filter */}
         <div className="category-filter text-center mb-5">
@@ -82,24 +100,27 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <Row>
-          {filteredProjects.map(project => (
-            <Col md={6} lg={4} className="mb-4" key={project.id}>
-              <Card className="h-100">
+          {filteredProjects.map((project) => (
+            <Col md={6} className="mb-4" key={project.id}>
+              <Card className="h-100 shadow-sm">
                 <Card.Img
                   variant="top"
                   src={project.image}
-                  alt={project.title}
-                  className="project-image"
+                  style={{ height: '300px', objectFit: 'cover' }}
                 />
                 <Card.Body>
                   <Card.Title>{project.title}</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    {project.location}
+                  </Card.Subtitle>
                   <Card.Text>{project.description}</Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                  <Button variant="outline-primary" className="w-100">
+                  <Link 
+                    to={`/projects/${project.id}`}
+                    className="btn btn-primary"
+                  >
                     Xem chi tiết
-                  </Button>
-                </Card.Footer>
+                  </Link>
+                </Card.Body>
               </Card>
             </Col>
           ))}
